@@ -1,0 +1,43 @@
+﻿@layout HomeLayout
+@page "/login"
+@using System.Text.Json
+@using PasswordManager.UI.Blazor.Web.Models
+@inject HttpClient Http
+
+<h3>Login</h3>
+<div id="login-form">
+    <p>Please enter your username and password.</p>
+    <input id="username" @bind="username" />
+    <input id="password" @bind="password" />
+    <button type="submit" @onclick="HandleClick">Submit</button>
+    <p>@Token</p>
+</div>
+
+@code {
+    private string Token = "Not logged in!";
+    private string username = string.Empty;
+    private string password = string.Empty;
+
+    protected async Task HandleClick(MouseEventArgs mouseEventArgs)
+    {
+        var response = await Http.PostAsJsonAsync("https://localhost:7245/api/Account/Login", new { username , password });
+        if (response.IsSuccessStatusCode)
+        {
+            var result = await response.Content.ReadAsStringAsync();
+            var loginModel = JsonSerializer.Deserialize<Login>(result, new JsonSerializerOptions() { PropertyNamingPolicy = JsonNamingPolicy.CamelCase });
+            if (loginModel == null)
+            {
+                Token = "Json Null";
+            }
+            else
+            {
+                Token = loginModel.Token;
+            }
+            
+        }
+        else
+        {
+            Token = $"Failed : {response.StatusCode}";
+        }
+    }
+}

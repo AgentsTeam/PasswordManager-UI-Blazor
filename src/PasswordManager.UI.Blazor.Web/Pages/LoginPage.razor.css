@@ -1,0 +1,14 @@
+﻿body {
+}
+
+#login-form {
+    display : flex;
+    flex-direction : column;
+    width : 50%;
+    align-items : center;
+    margin : auto;
+    gap : 5px;
+}
+
+#login-form p {
+}

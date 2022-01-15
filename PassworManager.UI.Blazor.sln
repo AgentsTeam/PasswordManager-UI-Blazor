@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8D224747-E6EB-4F64-B085-778BC92B3B6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PasswordManager.UI.Blazor.Web", "src\PasswordManager.UI.Blazor.Web\PasswordManager.UI.Blazor.Web.csproj", "{80B3F403-90AC-4D01-B8E3-22101EAE5A6B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80B3F403-90AC-4D01-B8E3-22101EAE5A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80B3F403-90AC-4D01-B8E3-22101EAE5A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80B3F403-90AC-4D01-B8E3-22101EAE5A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80B3F403-90AC-4D01-B8E3-22101EAE5A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{80B3F403-90AC-4D01-B8E3-22101EAE5A6B} = {8D224747-E6EB-4F64-B085-778BC92B3B6C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F283E9EE-5EA4-420D-A9E2-09516AD7A639}
+	EndGlobalSection
+EndGlobal
